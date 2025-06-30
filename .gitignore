@@ -1,0 +1,9 @@
+.netrwhist
+
+# ignore plugins so that anyone can add their own
+pack/coc
+pack/plugins/start/*
+pack/themes/start/*
+
+coc-settings.json
+

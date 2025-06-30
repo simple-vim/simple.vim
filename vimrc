@@ -1,7 +1,7 @@
 " COLORSCHEME
 " copy your favorite theme's repo into ./pack/themes/start/
 " e.g. ./pack/themes/start/dracula
-" colorscheme dracula
+colorscheme catppuccin_mocha
 set termguicolors
 " VIM SETTINGS DO
 " syntax and filetype related
