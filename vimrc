@@ -11,9 +11,7 @@ source $HOME/.config/vim/templeman.vim
 " VIM SETTINGS 
 " syntax and filetype related
 syntax enable
-filetype on
-filetype plugin on
-filetype indent on
+filetype plugin indent on
 set autoindent
 set smartindent
 
