@@ -6,7 +6,7 @@ set termguicolors
 
 " Templates and Snippets
 " visit templeman script
-source templeman.vim
+source $HOME/.config/vim/templeman.vim
 
 " VIM SETTINGS 
 " syntax and filetype related
