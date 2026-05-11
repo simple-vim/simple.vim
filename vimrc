@@ -117,17 +117,24 @@ let g:livepreview_use_biber = 1
 " Adding <> to tag matching system 
 runtime macros/matchit.vim
 set matchpairs+=<:>
+
+" Surround visual text with <SPACE>tw  
 function! VisualTagsWrap()
     if !exists('g:tags_to_wrap')
         let g:tags_to_wrap=[]
     endif
-    let g:tags_to_wrap=split(input('Space-separated tags to wrap block: ', join(g:tags_to_wrap, ' ')), '\\s\\+')
+    let g:tags_to_wrap = split(input('Space-separated tags to wrap block: ', join(g:tags_to_wrap, ' ')), '\s\+')
     if len(g:tags_to_wrap) > 0
-        execute 'normal! `>a</'.join(reverse(g:tags_to_wrap), '></').'>'  " Wrap opening tags
-        execute 'normal! `<i<'.join(reverse(g:tags_to_wrap), '><').'>'  " Wrap closing tags
-        execute 'normal! `>%</'.join(reverse(g:tags_to_wrap), '></').'>'  " Wrap opening tags
+        " Build opening tags: <tag1><tag2>
+        let opening = join(map(copy(g:tags_to_wrap), '"<" . v:val . ">"'), '')
+        
+        " Build closing tags: </tag2></tag1>
+        let closing = join(map(reverse(copy(g:tags_to_wrap)), '"</" . v:val . ">"'), '')
+        
+        execute "normal! `<i" . opening
+        execute "normal! `>a" . closing
     endif
 endfunction
-vnoremap <silent>,w <ESC>:call VisualTagsWrap()<CR>
+vnoremap <silent>tw <ESC>:call VisualTagsWrap()<CR>
  
 
