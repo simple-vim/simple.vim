@@ -1,3 +1,5 @@
+" make your own templates using templeman
+
 nnoremap ,html :-1read $HOME/.config/vim/snippets/scaffold.html<CR>3jwf>a
 nnoremap ,rif :-1read $HOME/.config/vim/snippets/if.rb<CR>2j4dd2kwcW
 nnoremap ,rife :-1read $HOME/.config/vim/snippets/if.rb<CR>2j2dd2kwcW
