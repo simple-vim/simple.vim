@@ -1,7 +1,7 @@
 " COLORSCHEME
 " copy your favorite theme's repo into ./pack/themes/start/
 " e.g. ./pack/themes/start/dracula
-colorscheme catppuccin_mocha
+colorscheme sorbet
 set termguicolors
 
 " Templates and Snippets
