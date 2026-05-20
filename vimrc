@@ -15,6 +15,8 @@ filetype plugin indent on
 set autoindent
 set smartindent
 
+set noswapfile
+
 " there is an space at the end of the last line
 " this means end of each buffer is filled with \ character
 set fillchars=eob:\ 
